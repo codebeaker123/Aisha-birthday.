@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Aisha 🎂</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #8e2de2);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 92%;
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+h2 {
+    color: #fff700;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #e91e63;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#page2,
+#page3,
+#page4 {
+    display: none;
+}
+
+/* Gift */
+
+.gift {
+    font-size: 90px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Cake */
+
+.cake {
+    font-size: 100px;
+    margin: 15px;
+}
+
+.candle {
+    font-size: 35px;
+}
+
+/* Secret Message */
+
+.secret {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+}
+
+.heart {
+    font-size: 40px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Balloons */
+
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    font-size: 45px;
+    animation: float 7s linear infinite;
+}
+
+.b1 {
+    left: 5%;
+}
+
+.b2 {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.b3 {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.b4 {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 110%;
+        opacity: 0;
+    }
+}
+
+/* Confetti */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Typing */
+
+#typing {
+    min-height: 150px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Balloons -->
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎈</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">🎈</div>
+
+
+<!-- PAGE 1 -->
+
+<div class="container" id="page1">
+
+    <div class="gift">🎁</div>
+
+    <h1>A Special Surprise</h1>
+
+    <p>
+        Aisha, someone has prepared
+        something special for you... ❤️
+    </p>
+
+    <button onclick="openGift()">
+        Open Your Surprise 💝
+    </button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="container" id="page2">
+
+    <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+    <h2>Dear Aisha ❤️</h2>
+
+    <div id="typing"></div>
+
+    <button onclick="showCake()">
+        Next Surprise 🎂
+    </button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="container" id="page3">
+
+    <h1>🎂 Birthday Cake 🎂</h1>
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <div class="candle">
+        🕯️ 🕯️ 🕯️
+    </div>
+
+    <p>
+        Make a wish, Aisha! ✨
+    </p>
+
+    <button onclick="blowCandles()">
+        Make a Wish ✨
+    </button>
+
+    <button onclick="showSecret()">
+        One More Surprise 💌
+    </button>
+
+    <div class="secret" id="secret">
+
+        <h2>💌 A Secret Message</h2>
+
+        <p>
+            Aisha, you are not just my sister,
+            you are one of the most special people
+            in my life. ❤️
+            <br><br>
+
+            May Allah always keep you happy,
+            give you success and fill your life
+            with beautiful moments. 🤲✨
+            <br><br>
+
+            Keep smiling always! 😊
+        </p>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <h2>
+            Happy Birthday Aisha! 🎉
+        </h2>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* Open Gift */
+
+function openGift() {
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "block";
+
+    createConfetti();
+
+    typeMessage();
+}
+
+
+/* Typing Message */
+
+function typeMessage() {
+
+    let text =
+    "Happy Birthday Aisha! 🎂❤️ You are not just my sister, you are also a wonderful friend. May your life always be filled with happiness, success, love and countless beautiful moments. Keep smiling and always stay happy! ✨";
+
+    let i = 0;
+
+    let box = document.getElementById("typing");
+
+    function typing() {
+
+        if (i < text.length) {
+
+            box.innerHTML += text.charAt(i);
+
+            i++;
+
+            setTimeout(typing, 35);
+        }
+    }
+
+    typing();
+}
+
+
+/* Show Cake */
+
+function showCake() {
+
+    document.getElementById("page2").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+}
+
+
+/* Make Wish */
+
+function blowCandles() {
+
+    document.querySelector(".candle").innerHTML =
+        "💨 🕯️ ❌";
+
+    createConfetti();
+
+    alert(
+        "✨ Wish made! May all your dreams come true, Aisha! ❤️"
+    );
+}
+
+
+/* Secret Message */
+
+function showSecret() {
+
+    document.getElementById("secret").style.display = "block";
+
+    createConfetti();
+}
+
+
+/* Confetti */
+
+function createConfetti() {
+
+    for (let i = 0; i < 100; i++) {
+
+        let confetti =
+            document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.background =
+            "hsl(" +
+            Math.random() * 360 +
+            ", 100%, 50%)";
+
+        confetti.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        document.body.appendChild(confetti);
+    }
+}
+
+</script>
+
+</body>
+</html>
